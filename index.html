@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Video Background</title>
+  </head>
+  <body>
+    <section>
+      <h1>Welcome To Greenland</h1>
+      <div class="vid-container">
+        <div class="overlay"></div>
+        <video autoplay muted loop playsinline>
+          <source
+            id="video"
+            src="videos/land_of_ice_1920.webm"
+            type="video/webm"
+          />
+        </video>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(window).bind("resize", function (e) {
+        if (window.RT) clearTimeout(window.RT);
+        window.RT = setTimeout(function () {
+          this.location.reload(false); /* false to get page from cache */
+        }, 100);
+      });
+      if ($(window).width() < 1920 && $(window).width() >= 1280) {
+        $("#video").attr("src", "videos/land_of_ice_1280.webm");
+        alert("More than 1280");
+      } else if ($(window).width() < 1280 && $(window).width() >= 854) {
+        $("#video").attr("src", "videos/land_of_ice_854.webm");
+        alert("More than 854");
+      } else if ($(window).width() < 854 && $(window).width() >= 640) {
+        $("#video").attr("src", "videos/land_of_ice_640.webm");
+        alert("More than 640");
+      } else if ($(window).width() < 640 && $(window).width() >= 426) {
+        $("#video").attr("src", "videos/land_of_ice_426.webm");
+        alert("More than 426");
+      }
+    </script>
+  </body>
+</html>
