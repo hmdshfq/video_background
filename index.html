@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap"
+      rel="preload"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap"
+      />
+    </noscript>
     <title>Video Background</title>
   </head>
   <body>
@@ -11,7 +29,14 @@
       <h1>Welcome To Greenland</h1>
       <div class="vid-container">
         <div class="overlay"></div>
-        <video id="video" autoplay muted loop playsinline>
+        <video
+          id="video"
+          poster="images/video.webp"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
           <source src="" type="video/webm" />
         </video>
       </div>
