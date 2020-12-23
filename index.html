@@ -42,18 +42,21 @@
           this.location.reload(false); /* false to get page from cache */
         }, 100);
       });
+      // A function that will take the width of screen as a parameter to load
+      // the corresponding resolution file
+      const change_file = (resolution) => {
+        $("#video source").attr(
+          "src",
+          "videos/land_of_ice_" + resolution + ".webm"
+        );
+        $("#video")[0].load();
+      };
       if ($(window).width() >= 1920) {
-        $("#video source").attr("src", "videos/land_of_ice_1920.webm");
-        $("#video")[0].load();
+        change_file(1920);
       } else if ($(window).width() < 1920 && $(window).width() >= 1280) {
-        $("#video source").attr("src", "videos/land_of_ice_1280.webm");
-        $("#video")[0].load();
-      } else if ($(window).width() < 1280 && $(window).width() >= 854) {
-        $("#video source").attr("src", "videos/land_of_ice_854.webm");
-        $("#video")[0].load();
+        change_file(1280);
       } else {
-        $("#video source").attr("src", "videos/land_of_ice_640.webm");
-        $("#video")[0].load();
+        change_file(854);
       }
     </script>
   </body>

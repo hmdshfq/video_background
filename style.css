@@ -155,8 +155,9 @@ section h1 {
   margin: 15px;
   padding: 20px;
   text-align: center;
-  z-index: 10;
+  z-index: 1000;
   color: white;
+  text-shadow: 2px 4px 2px lightblue;
 }
 
 section .vid-container {
@@ -189,5 +190,6 @@ section .overlay {
   opacity: 0.2;
   width: 100%;
   height: 100vh;
+  z-index: 100;
 }
 /*# sourceMappingURL=style.css.map */
