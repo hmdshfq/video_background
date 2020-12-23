@@ -43,16 +43,16 @@
         }, 100);
       });
       if ($(window).width() >= 1920) {
-        $("#video").attr("src", "videos/land_of_ice_1920.webm");
+        $("#video source").attr("src", "videos/land_of_ice_1920.webm");
         $("#video")[0].load();
       } else if ($(window).width() < 1920 && $(window).width() >= 1280) {
-        $("#video").attr("src", "videos/land_of_ice_1280.webm");
+        $("#video source").attr("src", "videos/land_of_ice_1280.webm");
         $("#video")[0].load();
       } else if ($(window).width() < 1280 && $(window).width() >= 854) {
-        $("#video").attr("src", "videos/land_of_ice_854.webm");
+        $("#video source").attr("src", "videos/land_of_ice_854.webm");
         $("#video")[0].load();
       } else {
-        $("#video").attr("src", "videos/land_of_ice_640.webm");
+        $("#video source").attr("src", "videos/land_of_ice_640.webm");
         $("#video")[0].load();
       }
     </script>
