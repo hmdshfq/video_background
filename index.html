@@ -45,10 +45,7 @@
       // A function that will take the width of screen as a parameter to load
       // the corresponding resolution file
       const change_file = (resolution) => {
-        $("#video source").attr(
-          "src",
-          "videos/land_of_ice_" + resolution + ".webm"
-        );
+        $("#video source").attr("src", `videos/land_of_ice_${resolution}.webm`);
         $("#video")[0].load();
       };
       if ($(window).width() >= 1920) {
